@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.1.0...v1.1.1) (2020-09-04)
+
+
+### Bug Fixes
+
+* update action name in yml ([ba843fb](https://github.com/sgoff0/github-actions-jwt-generator/commit/ba843fb1b5597e5a2aa62feabd0dd142a3d4e303))
+
 # [1.1.0](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.4...v1.1.0) (2020-09-04)
 
 
