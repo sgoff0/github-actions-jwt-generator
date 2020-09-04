@@ -5261,12 +5261,11 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__webpack_require__(186));
 const jwt = __importStar(__webpack_require__(486));
-const util = __importStar(__webpack_require__(669));
 function stringToJSON(input, name) {
     try {
         core.info(`Attempting to parse ${name} of ${input}`);
         const retVal = JSON.parse(input);
-        core.info(`parsed ${util.inspect(retVal)}`);
+        // core.info(`parsed ${util.inspect(retVal)}`);
         return retVal;
     }
     catch (err) {
@@ -5286,11 +5285,8 @@ function run() {
             if (!payload) {
                 return core.setFailed(`Payload input required but got '${payload}'`);
             }
-            const token = jwt.sign({ "hello": "world" }, 'topSecret', { "expiresIn": "5m" });
-            const token2 = jwt.sign(payload, secret, options);
-            // core.setSecret(token);
+            const token = jwt.sign(payload, secret, options);
             core.exportVariable(tokenExportVariableName || 'JWT_TOKEN', token);
-            core.exportVariable('JWT_TOKEN2', token2);
         }
         catch (error) {
             core.setFailed(error.message);

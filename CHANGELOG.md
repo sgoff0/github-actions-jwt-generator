@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.1.1...v1.1.2) (2020-09-04)
+
+
+### Bug Fixes
+
+* local action now working as expected ([5337329](https://github.com/sgoff0/github-actions-jwt-generator/commit/53373290b5a20fd90958e1d09fbeb904764bf499))
+
 ## [1.1.1](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.1.0...v1.1.1) (2020-09-04)
 
 
