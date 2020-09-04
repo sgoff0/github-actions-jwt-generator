@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.1...v1.0.2) (2020-09-04)
+
+
+### Bug Fixes
+
+* troubleshoot why package.json version number is not bumped by ci ([a02455a](https://github.com/sgoff0/github-actions-jwt-generator/commit/a02455a7ddf610fe49473ff3a3e6749cf7aaff26))
+
 ## [1.0.1](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.0...v1.0.1) (2020-09-04)
 
 
