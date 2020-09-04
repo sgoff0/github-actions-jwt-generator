@@ -1,7 +1,8 @@
 {
   "name": "github-actions-jwt-generator",
-  "version": "1.1.0",
+  "version": "1.0.3",
   "description": "GitHub Actions JWT Generator",
+  "private": true,
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
