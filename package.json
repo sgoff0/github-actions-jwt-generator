@@ -5,8 +5,7 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "build:ci": "ncc build src/main.ts -o dist",
+    "build": "ncc build src/main.ts -o dist",
     "commit": "cz",
     "prettier:check": "prettier --check 'src/**/*.ts'",
     "prettier:fix": "prettier --write '**/*.ts'",
@@ -26,7 +25,7 @@
   "author": "Marton Papp <morz@morz.hu>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "1.0.0",
+    "@actions/core": "^1.2.5",
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
@@ -35,6 +34,7 @@
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "^7.0.7",
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/node": "12.0.4",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",

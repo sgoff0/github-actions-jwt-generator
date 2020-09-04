@@ -3,11 +3,24 @@ import * as jwt from 'jsonwebtoken';
 
 async function run() {
   try {
-    const secret = core.getInput('secret');
-    const payload = core.getInput('payload');
-    const token = jwt.sign(payload, secret);
+    const secret = core.getInput('secret', { required: true });
+    const payload = core.getInput('payload', { required: true });
+    const options = core.getInput('options', { required: false });
+    const tokenExportVariableName = core.getInput('envVar', {
+      required: false,
+    });
+    let jsonOptions = {};
+    if (options) {
+      try {
+        jsonOptions = JSON.parse(options);
+      } catch (err) {
+        core.setFailed(`Action failed parsing options ${err}`);
+      }
+    }
+    const token = jwt.sign(payload, secret, jsonOptions);
 
-    core.setOutput('token', token);
+    core.setSecret(token);
+    core.exportVariable(tokenExportVariableName || 'JWT_TOKEN', token);
   } catch (error) {
     core.setFailed(error.message);
   }
