@@ -8,6 +8,10 @@ jobs:
     name: Test JWT generator
     runs-on: ubuntu-latest
     steps:
+      # checkout repo to use local action
+      - name: Checkout
+        uses: actions/checkout@v2
+      # use local action
       - name: JWT Generator
         id: jwtGenerator
         uses: ./
