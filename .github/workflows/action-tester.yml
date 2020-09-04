@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: JWT Generator
         id: jwtGenerator
-        uses: sgoff0/github-actions-jwt-generator@1.1.0
+        uses: sgoff0/github-actions-jwt-generator@v1
         with:
           secret: topsecret
           payload: '{"hello":"world"}'
