@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.4...v1.1.0) (2020-09-04)
+
+
+### Features
+
+* **jwt:** allow jsonwebtoken options as input and export variable as output ([c3b08ff](https://github.com/sgoff0/github-actions-jwt-generator/commit/c3b08ff5ffc8f7acd54949541b35596114925fd7))
+
 ## [1.0.4](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.3...v1.0.4) (2020-09-04)
 
 
