@@ -1,6 +1,6 @@
-name: 'JWT Generator'
+name: 'JWT Generator with options'
 description: 'Generate JWT tokens (JSON Web Tokens)'
-author: 'Marton Papp <morz@morz.hu>'
+author: 'sgoff0'
 inputs:
   secret:
     description: 'The shared secret used to sign the JWTs'
