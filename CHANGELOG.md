@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.3...v1.0.4) (2020-09-04)
+
+
+### Bug Fixes
+
+* troubleshoot verison number ([c8c84ab](https://github.com/sgoff0/github-actions-jwt-generator/commit/c8c84abc6fc829764c5ee2c28271bf9bfe9d12de))
+* use @semantic-release/npm in private mode to bump package.json version number ([0f8ebdb](https://github.com/sgoff0/github-actions-jwt-generator/commit/0f8ebdba59f4e4f36fe0a94d859ffa072f8a4efa))
+
 ## [1.0.3](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.2...v1.0.3) (2020-09-04)
 
 
