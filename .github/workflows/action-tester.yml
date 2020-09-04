@@ -2,6 +2,9 @@ name: Actions Tester
 
 on:
   workflow_dispatch:
+# on:
+#   push:
+#     branches: [master]
 
 jobs:
   send:
@@ -16,9 +19,9 @@ jobs:
         id: jwtGenerator
         uses: ./
         with:
-          secret: topsecret
+          secret: topSecret
           payload: '{"hello":"world"}'
-          options: '{ "expiresIn": "15s" }'
+          jwt_options: '{"expiresIn":"5m"}'
           envVar: SOME_OUTPUT_ENV_VAR
       - name: DUMP Token
         run: echo $SOME_OUTPUT_ENV_VAR
