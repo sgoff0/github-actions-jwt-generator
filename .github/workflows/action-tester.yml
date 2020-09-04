@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  send:
+    name: Test JWT generator
+    runs-on: ubuntu-latest
+    steps:
+      - name: JWT Generator
+        id: jwtGenerator
+        uses: sgoff0/github-actions-jwt-generator@1.0.4
+        with:
+          secret: topsecret
+          payload: '{"hello":"world"}'
+          options: '{ "expiresIn": "15s" }'
+          envVar: SOME_OUTPUT_ENV_VAR
+      - name: DUMP Token
+        run: echo $SOME_OUTPUT_ENV_VAR
