@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.2...v1.0.3) (2020-09-04)
+
+
+### Bug Fixes
+
+* troubleshoot version number ([97c2dbe](https://github.com/sgoff0/github-actions-jwt-generator/commit/97c2dbea6462fd18d62b2af5a8a6b443b8381f1f))
+
 ## [1.0.2](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.0.1...v1.0.2) (2020-09-04)
 
 
