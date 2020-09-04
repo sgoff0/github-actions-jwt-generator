@@ -1,3 +1,5 @@
+name: Actions Tester
+
 on:
   workflow_dispatch:
 
@@ -8,7 +10,7 @@ jobs:
     steps:
       - name: JWT Generator
         id: jwtGenerator
-        uses: sgoff0/github-actions-jwt-generator@1.0.4
+        uses: sgoff0/github-actions-jwt-generator
         with:
           secret: topsecret
           payload: '{"hello":"world"}'
