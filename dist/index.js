@@ -5279,12 +5279,13 @@ function run() {
             const options = stringToJSON(core.getInput('options', { required: false }), 'options');
             const tokenExportVariableName = core.getInput('envVar', {
                 required: false,
-            });
+            }) || 'JWT_TOKEN';
             if (!payload) {
                 return core.setFailed(`Payload input required but got '${payload}'`);
             }
             const token = jwt.sign(payload, secret, options);
-            core.exportVariable(tokenExportVariableName || 'JWT_TOKEN', token);
+            core.exportVariable(tokenExportVariableName, token);
+            core.setSecret(tokenExportVariableName);
         }
         catch (error) {
             core.setFailed(error.message);

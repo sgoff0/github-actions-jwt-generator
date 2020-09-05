@@ -8,7 +8,7 @@ This is a [fork of morzzz007/github-actions-jwt-generator@1.0.1](https://github.
 
 ```yaml
 - name: JWT Generator
-  uses: sgoff0/github-actions-jwt-generator@2.0.0
+  uses: sgoff0/github-actions-jwt-generator@2.0.1
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ jobs:
     steps:
         - name: JWT Generator
         id: jwtGenerator
-        uses: sgoff0/github-actions-jwt-generator@2.0.0
+        uses: sgoff0/github-actions-jwt-generator@2.0.1
         with:
           secret: topSecret
           payload: '{"hello":"world"}'
