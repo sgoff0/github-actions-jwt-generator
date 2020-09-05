@@ -30,8 +30,8 @@ async function run() {
       return core.setFailed(`Payload input required but got '${payload}'`);
     }
     const token = jwt.sign(payload, secret, options);
-    core.exportVariable(tokenExportVariableName, token);
     core.setSecret(tokenExportVariableName);
+    core.exportVariable(tokenExportVariableName, token);
   } catch (error) {
     core.setFailed(error.message);
   }
