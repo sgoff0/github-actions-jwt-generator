@@ -1,12 +1,9 @@
 import * as core from '@actions/core';
 import * as jwt from 'jsonwebtoken';
-import * as util from 'util';
 
 function stringToJSON(input: string, name: string) {
   try {
-    core.info(`Attempting to parse ${name} of ${input}`);
     const retVal = JSON.parse(input);
-    // core.info(`parsed ${util.inspect(retVal)}`);
     return retVal;
   } catch (err) {
     core.setFailed(`Action failed parsing options with error '${err}'`);
@@ -22,7 +19,7 @@ async function run() {
       'payload',
     );
     const options = stringToJSON(
-      core.getInput('jwt_options', { required: false }),
+      core.getInput('options', { required: false }),
       'options',
     );
     const tokenExportVariableName = core.getInput('envVar', {

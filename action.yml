@@ -6,7 +6,7 @@ inputs:
     description: 'The shared secret used to sign the JWTs'
   payload:
     description: 'The payload to encrypt'
-  jwt_options:
+  options:
     description: 'The jsonwebtoken options object'
   envVar:
     description: 'Name of the environment variable to output'

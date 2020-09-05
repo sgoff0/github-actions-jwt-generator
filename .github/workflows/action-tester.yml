@@ -21,7 +21,7 @@ jobs:
         with:
           secret: topSecret
           payload: '{"hello":"world"}'
-          jwt_options: '{"expiresIn":"5m"}'
+          options: '{"expiresIn":"5m"}'
           envVar: SOME_OUTPUT_ENV_VAR
       - name: DUMP Token
         run: echo $SOME_OUTPUT_ENV_VAR

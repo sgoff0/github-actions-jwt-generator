@@ -2,18 +2,20 @@
 
 Do you want to send an HTTP request using HTTPie or CURL with a signed JWT token and wondering how you can create the token for a given payload and secret? Well, look no further!
 
+This is a [fork of morzzz007/github-actions-jwt-generator@1.0.1](https://github.com/morzzz007/github-actions-jwt-generator) allowing [jsonwebtoken's](https://www.npmjs.com/package/jsonwebtoken) options object to be passed in, something required if you want to set an expiration on the token.
+
 ## Installation
 
 ```yaml
 - name: JWT Generator
-  uses: morzzz007/github-actions-jwt-generator@1.0.1
+  uses: sgoff0/github-actions-jwt-generator@2.0.0
 ```
 
 ## Usage
 
-The required inputs are `secret` and `payload`. It is recommended to store the secret as an encrypted [environment variable.](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables)
+The required inputs are `secret` and `payload`.
 
-The output where the generated token is in `token`. To use it in a next step use `${{steps.<step_id>.outputs.token}}`. The token is generated with default HMAC SHA256 algorithm.
+The output where the generated environment vairable is `JWT_TOKEN`, unless you provide an alternative value in the `envVar` input. The token is generated with default HMAC SHA256 algorithm using npm's [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) under the hood.
 
 ### Example usage
 
@@ -27,11 +29,11 @@ jobs:
     steps:
         - name: JWT Generator
         id: jwtGenerator
-        uses: sgoff0/github-actions-jwt-generator@1.1.2
+        uses: sgoff0/github-actions-jwt-generator@2.0.0
         with:
           secret: topSecret
           payload: '{"hello":"world"}'
-          jwt_options: '{"expiresIn":"5m"}'
+          options: '{"expiresIn":"5m"}'
           envVar: SOME_OUTPUT_ENV_VAR
       - name: DUMP Token
         run: echo $SOME_OUTPUT_ENV_VAR
