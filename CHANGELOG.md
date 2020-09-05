@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.1.2...v2.0.0) (2020-09-05)
+
+
+### Features
+
+* finish implementation allowing for options object ([61ad243](https://github.com/sgoff0/github-actions-jwt-generator/commit/61ad243d67fac3e9fe0e082f2f2fb5f6a0642310))
+
+
+### BREAKING CHANGES
+
+* jwt_options renamed to options
+
 ## [1.1.2](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.1.1...v1.1.2) (2020-09-04)
 
 

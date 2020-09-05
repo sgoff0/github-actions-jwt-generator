@@ -5263,9 +5263,7 @@ const core = __importStar(__webpack_require__(186));
 const jwt = __importStar(__webpack_require__(486));
 function stringToJSON(input, name) {
     try {
-        core.info(`Attempting to parse ${name} of ${input}`);
         const retVal = JSON.parse(input);
-        // core.info(`parsed ${util.inspect(retVal)}`);
         return retVal;
     }
     catch (err) {
@@ -5278,7 +5276,7 @@ function run() {
         try {
             const secret = core.getInput('secret', { required: true });
             const payload = stringToJSON(core.getInput('payload', { required: true }), 'payload');
-            const options = stringToJSON(core.getInput('jwt_options', { required: false }), 'options');
+            const options = stringToJSON(core.getInput('options', { required: false }), 'options');
             const tokenExportVariableName = core.getInput('envVar', {
                 required: false,
             });
