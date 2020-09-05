@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/sgoff0/github-actions-jwt-generator/compare/v2.0.0...v2.0.1) (2020-09-05)
+
+
+### Bug Fixes
+
+* set exported token as a secret so it is not printed to console ([07fc7ea](https://github.com/sgoff0/github-actions-jwt-generator/commit/07fc7ea5e25c6f93d17b6ab454450e1953d8459d))
+
 # [2.0.0](https://github.com/sgoff0/github-actions-jwt-generator/compare/v1.1.2...v2.0.0) (2020-09-05)
 
 
